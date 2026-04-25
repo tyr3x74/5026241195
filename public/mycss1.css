@@ -1,0 +1,41 @@
+    body{
+        background-color: rgb(225, 239, 252);
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+    p{
+        text-align: left;
+
+
+    }
+    #name{
+        font-weight: bold;
+        font-size: xx-small;
+    }
+    .publish{
+        text-align: center;
+        font-size: xx-small;
+    }
+    a:link{
+        text-decoration: none;
+        color: blue;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: blue;
+        font-size: medium;
+    }
+    a:visited{
+        text-decoration: none;
+        color: blue;
+    }
+    .agakmasuk{
+        margin-left: 20px;
+    }
+    .gambar{
+        border-radius: 15px;
+    }
