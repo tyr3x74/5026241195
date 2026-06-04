@@ -2,6 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\TelevisiController;
+
+
+Route::get('/televisi', [TelevisiController::class, 'index']);
+Route::get('/televisi/tambah', [TelevisiController::class, 'tambah']);
+Route::post('/televisi/store', [TelevisiController::class, 'store']);
+Route::get('/televisi/edit/{id}', [TelevisiController::class, 'edit']);
+Route::post('/televisi/update', [TelevisiController::class, 'update']);
+Route::get('/televisi/hapus/{id}', [TelevisiController::class, 'hapus']);
+Route::get('/televisi/cari', [TelevisiController::class, 'cari']);
 
 Route::get('/pegawai', [PegawaiDBController::class, 'index']);
 Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
@@ -12,6 +22,9 @@ Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 Route::get('/', function () {
     return view('template');
+});
+Route::get('/menu', function () {
+    return view('menu');
 });
 Route::get('/pertemuan1', function () {
     return view('pertemuan1');
