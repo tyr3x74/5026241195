@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\TelevisiController;
-
+use App\Http\Controllers\SiswaController;
 
 Route::get('/televisi', [TelevisiController::class, 'index']);
 Route::get('/televisi/tambah', [TelevisiController::class, 'tambah']);
@@ -23,6 +23,15 @@ Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 Route::get('/', function () {
     return view('template');
 });
+
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::get('/siswa/cari', [SiswaController::class, 'cari'])->name('siswa.cari');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
 Route::get('/menu', function () {
     return view('menu');
 });
